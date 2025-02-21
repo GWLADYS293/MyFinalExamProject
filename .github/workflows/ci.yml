@@ -1,4 +1,4 @@
-name: Simple CI
+name: Simple Automation on Windows
 
 on:
   push:
@@ -7,9 +7,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  say-hello:
+    runs-on: windows-latest  # Environnement Windows
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Afficher un message
-        run: echo "Le workflow GitHub Actions fonctionne correctement ✅"
+    - name: Dire Bonjour sur Windows 👋
+      run: echo "👋 Bonjour depuis Windows ! GitHub Actions fonctionne 🚀"
+
+
