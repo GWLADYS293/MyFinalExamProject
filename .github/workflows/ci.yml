@@ -1,0 +1,11 @@
+name: Simple Automation on Windows
+
+on: [push, pull_request]
+
+jobs:
+  say-hello:
+    runs-on: windows-latest # Environnement Windows
+
+    steps:
+      - name: Dire Bonjour sur Windows 👋
+        run: echo "👋 Bonjour depuis Windows ! GitHub Actions fonctionne 🚀"
